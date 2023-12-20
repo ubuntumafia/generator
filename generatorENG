@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Call Sign Generator</title>
+  <script>
+    function generatePhrase() {
+      var adjectives = ["Cool", "Dangerous", "Smart", "Relentless", "Magnificent", "Fast", "Accurate", "Powerful", "Elegant", "Brave", "Experienced", "Resolute", "Fearless", "Professional", "Courageous", "Fearless", "Stealthy", "Invincible", "Cruel", "Valiant", "Vigilant", "Silent", "Indomitable", "Lucky", "Fierce", "Terrible", "Cold-blooded", "Merciless", "Cunning", "Unyielding", "Adventurous", "Rebellious", "Guided", "Fanatical"];
+
+      var nouns = ["Adam", "Andrew", "Ashley", "Austin", "Benjamin", "Kevin", "Brian", "Carl", "Charles", "Christian", "Clinton", "Daniel", "Derek", "Donald", "Douglas", "Dwight", "Earl", "Edgar", "Eric", "Ethan", "Felix", "Franklin", "Jeff", "Greg", "Harry", "Henry", "Jack", "James", "John", "Kenneth", "Lawrence", "Mark", "Michael", "Matthew", "Nick", "Norman", "Scott", "Simon", "Steve", "Thomas", "Travis", "Tyler", "Wayne"];
+
+      var adjectiveIndex = Math.floor(Math.random() * adjectives.length);
+      var nounIndex = Math.floor(Math.random() * nouns.length);
+
+      var adjective = adjectives[adjectiveIndex];
+      var noun = nouns[nounIndex];
+
+      document.getElementById("phrase").innerHTML = adjective + " " + noun;
+    }
+  </script>
+</head>
+<body>
+  <h1 style="position: relative;text-align: center;">Call Sign Generator</h1>
+  <button onclick="generatePhrase()" style="display: block; margin: 0 auto;">Generate</button>
+  <p style="position: relative;text-align: center;" id="phrase"></p>
+</body>
+</html>
